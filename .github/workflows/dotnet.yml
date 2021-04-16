@@ -27,3 +27,8 @@ jobs:
     
     - name: Test
       run: dotnet test --no-build --no-restore
+      
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
