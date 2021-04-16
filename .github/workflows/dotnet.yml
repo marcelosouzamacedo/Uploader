@@ -32,3 +32,10 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Create resource group
+      uses: Azure/cli@v1.0.4
+      with:
+        azcliversion: 2.0.72
+        inlineScript:
+          az group create -n byhand
