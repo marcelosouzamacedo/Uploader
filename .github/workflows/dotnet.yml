@@ -38,4 +38,4 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript:
-          az group create -n byhand
+          az group create -n byhand -l brazilsouth
